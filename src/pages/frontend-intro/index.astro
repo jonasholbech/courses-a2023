@@ -15,14 +15,13 @@ const snippets = await codeFetcher("react/5.pagination", []);
     <h1>Frontend</h1>
     <h2>Introduction</h2>
     <h3>@jofh</h3>
-    <p>//TODO: you won't need one.com etc</p>
   </section>
   <section>
     <SlideControls />
   </section>
 
-  <section>
-    <h2>3 people</h2>
+  <section data-auto-animate>
+    <h2>4 undervisere</h2>
     <ol>
       <li>
         Peter <span class="highlight-specialty">"The Designer"</span> Tolstrup (ptoa)
@@ -37,87 +36,61 @@ const snippets = await codeFetcher("react/5.pagination", []);
         Jonas <span class="highlight-specialty">"The Tool"</span> Holbech (jofh)
       </li>
     </ol>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="explanation"
-      width="1000"
-      height="600"
-      style="top:0;"
-    >
-      <style>
-        rect {
-          fill: none;
-          stroke: lightblue;
-          stroke-width: 4;
-          stroke-dashoffset: 1;
-          stroke-dasharray: 1;
-        }
-
-        .letsAnimateSlow {
-          animation: awesome 4s linear forwards 1;
-        }
-
-        .letsAnimateFast {
-          animation: awesome 1s linear forwards 1;
-        }
-
-        @keyframes awesome {
-          to {
-            stroke-dashoffset: 0;
-          }
-        }
-        .highlight-specialty {
-          color: #7070ee;
-        }
-      </style>
-      <!-- <rect class="fragment fade-in-then-out" data-animation="letsAnimateFast" pathLength="1" x="100" y="170" width="750" height="110" /> -->
-      <rect
-        class="fragment fade-in-then-out"
-        data-animation="letsAnimateFast"
-        pathLength="1"
-        x="100"
-        y="120"
-        width="750"
-        height="165"></rect>
-      <rect
-        class="fragment fade-in-then-out"
-        data-animation="letsAnimateFast"
-        pathLength="1"
-        x="100"
-        y="120"
-        width="750"
-        height="110"></rect>
-      <!-- <rect class="fragment fade-in-then-out" data-animation="letsAnimateFast" pathLength="1" x="100" y="170" width="750" height="165" /> -->
-      <rect
-        class="fragment fade-in-then-out"
-        data-animation="letsAnimateFast"
-        pathLength="1"
-        x="100"
-        y="230"
-        width="750"
-        height="110"></rect>
-      <rect
-        class="fragment fade-in-then-out"
-        data-animation="letsAnimateFast"
-        pathLength="1"
-        x="100"
-        y="280"
-        width="750"
-        height="55"></rect>
-    </svg>
   </section>
 
-  <section>
-    <p>A few words before we look at the Week Plan</p>
-    <p>We:</p>
+  <section data-auto-animate>
+    <h2>1. tema</h2>
     <ol>
-      <li>Asked on "frontenders.dk" (a facebook group)</li>
       <li>
-        Looked at the <a href="https://frontendmasters.com/guides/"
+        Klaus <span class="highlight-specialty">"Vanilla"</span> Mandal (klmh)
+      </li>
+      <li>
+        Dannie <span class="highlight-specialty">"El Puritan"</span> Vinther (davi)
+      </li>
+    </ol>
+  </section>
+
+  <section data-auto-animate>
+    <h2>2. tema</h2>
+    <ol>
+      <li>
+        Peter <span class="highlight-specialty">"The Designer"</span> Tolstrup (ptoa)
+      </li>
+      <li>
+        Dannie <span class="highlight-specialty">"El Puritan"</span> Vinther (davi)
+      </li>
+    </ol>
+  </section>
+  <section data-auto-animate>
+    <h2>3. tema</h2>
+    <ol>
+      <li>
+        Dannie <span class="highlight-specialty">"El Puritan"</span> Vinther (davi)
+      </li>
+      <li>
+        Jonas <span class="highlight-specialty">"The Tool"</span> Holbech (jofh)
+      </li>
+    </ol>
+  </section>
+  <section data-auto-animate>
+    <h2>4. tema</h2>
+    <ol>
+      <li>
+        Jonas <span class="highlight-specialty">"The Tool"</span> Holbech (jofh)
+      </li>
+    </ol>
+  </section>
+  <section>
+    <p>Hvordan har vi fundet på hvad vi skal lege med?</p>
+    <p>Vi:</p>
+    <ol>
+      <li>Spurgte på "frontenders.dk" (en facebook gruppe)</li>
+      <li>
+        Kiggede på <a href="https://frontendmasters.com/guides/"
           >Frontendmasters ressources</a
         >
       </li>
-      <li>and decided that:</li>
+      <li>og besluttede at:</li>
     </ol>
   </section>
   <section>
@@ -128,9 +101,8 @@ const snippets = await codeFetcher("react/5.pagination", []);
           <li>git</li>
           <li>Vanilla JS FTW</li>
           <li>NPM</li>
-          <li>SASS</li>
-          <li>SVG</li>
           <li>React</li>
+          <li>Next</li>
         </ul>
       </div>
       <div class="col-6">
@@ -143,49 +115,68 @@ const snippets = await codeFetcher("react/5.pagination", []);
           </li>
           <li><span style="text-decoration: line-through">YARN</span></li>
           <li><span style="text-decoration: line-through">LESS</span></li>
+          <li><span style="text-decoration: line-through">SASS</span></li>
         </ul>
       </div>
     </div>
   </section>
-
+  <section>
+    <blockquote>
+      Det skal se godt ud, det skal virke, det skal give relevant feedback
+    </blockquote>
+  </section>
   <section>
     <section>
-      <h1>The Exam</h1>
+      <h1>Eksamen</h1>
     </section>
     <section>
-      <p class="fragment">everyone MUST code</p>
-      <p class="fragment">That means JS &amp; CSS</p>
-      <p class="fragment">you cannot pass without it!</p>
-      <p class="fragment">git and branches must be actively used</p>
+      <p class="fragment">ALLE skal kode</p>
+      <p class="fragment">JS &amp; CSS</p>
+      <p class="fragment">Du kan ikke bestå uden!</p>
+      <p class="fragment">git og branches skal bruges, aktivt</p>
     </section>
     <section>
+      <p>
+        <a href="https://katalog.kea.dk/course/3273331/2023-2024"
+          >Det officielle halløj</a
+        >
+      </p>
       <ol>
-        <li>3-4 weeks to do your project</li>
-        <li>30 minutes (per person) oral exam, including grading</li>
-        <li>Groups of 2-3 people</li>
+        <li>3-4 uger til at lave dit projekt</li>
+        <li>2-4 personer i hver gruppe</li>
         <li>
-          All mandatory assignments must be passed to qualify for the exam (more
-          in a few minutes)
+          Alle bundne forudsætninger skal være afleveret og bestået (mere om
+          lidt)
         </li>
         <li>
-          "Report": 12 pages plus 3 per group member<br />
-          <pre><code class="js">const pages = 12 + groupmembers.length * 3;</code></pre>
+          "Synopsis": 2 sider plus 1 pr gruppemedlem<br />
+          <pre><code class="js">const pages = 2 + groupmembers.length;</code></pre>
         </li>
       </ol>
     </section>
     <section>
-      <h3>Mandatory assignments (MA)</h3>
+      <ol start="5">
+        <li>
+          Selve eksamen<ol>
+            <li>
+              Projektdemonstration (10 min + 5 min pr. gruppemedlem)
+              <li>Individuel eksamination (20 min)</li>
+              <li>Votering og meddelelse af karakterer (5 min)</li>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h3>Bundne forudsætninger (BF)</h3>
       <ul>
-        <li>All MA's must be passed in order to qualify for the exam</li>
+        <li>Alle BF'er skal afleveres og bestås for at kunne gå til eksamen</li>
+        <li>Alle BF'er har en deadline, rettidige aflevering får feedback</li>
         <li>
-          All MA's have a deadline, assignments handed in, in due time, are
-          given feedback, late deliveries are not
+          Teksnisk set kan du bare aflevere når du afleverer dit eksamensprojekt
+          <ul><li>MEN LAD VÆRE!!!!!</li></ul>
         </li>
-        <li>
-          Technically, you can hand in the MA's when you start your exam project
-          <ul><li>BUT DON'T WAIT THAT LONG</li></ul>
-        </li>
-        <li>There is a total of 4 MA's</li>
+        <li>Der er 3 BF'ere</li>
       </ul>
     </section>
   </section>
@@ -193,36 +184,35 @@ const snippets = await codeFetcher("react/5.pagination", []);
     <section>
       <h2>
         <a
-          href="https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=5866&LocationType=1"
-          >The week plan</a
+          href="https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=6161&LocationType=1"
+          >Ugeplanen</a
         >
       </h2>
     </section>
-    <!-- <section>
-      <h2>The schedule changes halway through!!</h2>
-    </section>
     <section>
-      <h3>Week 34-41</h3>
-      <img src="/assets/frontend-intro/34-41.webp" alt="" />
+      <ul>
+        <li>Forstå fronter planen</li>
+        <li>TL;DL Too Long Didn't Listen</li>
+        <li>Work in progress, vi forbeholder os retten til at …</li>
+        <li>Front load - Løs opgaven når du har tid</li>
+        <li>Move fast, break stuff</li>
+        <li>Two learning paths - teaching - javascript.info</li>
+      </ul>
     </section>
-    <section>
-      <h3>Week 43-47</h3>
-      <img src="/assets/frontend-intro/43-47.webp" alt="" />
-    </section> -->
   </section>
 
   <section>
     <h2>
       <a
-        href="https://teams.microsoft.com/l/team/19%3a0lciKqk09fXsNT7xMp0ILOcReASbfGIAvA-bI8N8FZg1%40thread.tacv2/conversations?groupId=5334d0ab-85ab-4670-a9ba-0636914c824c&tenantId=d10c3c6e-c228-4944-8b6a-6067c6afe3c9"
-        >Our Teams channel</a
+        href="https://teams.microsoft.com/l/team/19%3a8UJVsYUx8JMoE68RB9-BTG7jpPoZiGeb_RUjkCatgGw1%40thread.tacv2/conversations?groupId=c20205cc-7d1a-41b4-9d11-a565bed66d18&tenantId=d10c3c6e-c228-4944-8b6a-6067c6afe3c9"
+        >Vores Teams Rum</a
       >
     </h2>
   </section>
   <section>
     <h2>
       <a href="https://www.facebook.com/groups/411356550003557"
-        >The KEA frontenders FaceBook group</a
+        >KEA frontenders FaceBook group</a
       >
     </h2>
   </section>
@@ -232,10 +222,10 @@ const snippets = await codeFetcher("react/5.pagination", []);
     </section>
     <section>
       <ul>
-        <li>Every Wednesday</li>
-        <li>3rd floor (in front of A360)</li>
+        <li>Hver onsdag</li>
+        <li>3. etage (foran A360)</li>
         <li>
-          And on Teams: <a href="https://bit.ly/3H0tkzE"
+          Og på Teams: <a href="https://bit.ly/3H0tkzE"
             >https://bit.ly/3H0tkzE</a
           >
         </li>
@@ -244,31 +234,29 @@ const snippets = await codeFetcher("react/5.pagination", []);
   </section>
   <section>
     <section>
-      <h1>Final thoughts</h1>
+      <h1>Løse tanker</h1>
+      <h2 class="fragment">og lidt om AI</h2>
+    </section>
+    <section>
+      <p>Vi lærer alle lidt forskelligt</p>
+      <p>Og vi starter forskellige steder</p>
+    </section>
+    <section>
+      <img src="/assets/frontend-intro/learning-pyramid2.jpg" alt="" />
+      <p><small>omdiskuteret model</small></p>
     </section>
     <section>
       <ol>
-        <li>
-          We have done this 6-7 times, and we have a few experiences we wanna
-          share
-        </li>
+        <li>Vær aktiv, diskutér, stil spørgsmål</li>
       </ol>
     </section>
     <section>
       <ol start="2">
-        <li>Be active, share, discuss and all will benefit</li>
+        <li>Hjælp hinanden, vi rykker alle sammen hurtigere</li>
       </ol>
     </section>
     <section>
       <ol start="3">
-        <li>
-          Check Teams EVERY MORNING, this is where we will let you know if
-          something is off
-        </li>
-      </ol>
-    </section>
-    <section>
-      <ol start="4">
         <li>
           Socialize
           <ul>
@@ -278,16 +266,65 @@ const snippets = await codeFetcher("react/5.pagination", []);
       </ol>
     </section>
     <section>
-      <ol start="5">
-        <li>
-          YOU have a responsibility, be active on Teams, ask questions, share
-          what you've got
-          <ul>
-            <li>community</li>
-            <li>there is no shame</li>
-          </ul>
-        </li>
+      <ol start="4">
+        <li>Del hvad i laver</li>
       </ol>
+    </section>
+  </section>
+  <section>
+    <section>
+      <h1><code>ChatGPT</code></h1>
+      <p>Og alle de andre</p>
+    </section>
+    <section>
+      <h2 class="fragment" data-fragment-index="5">Game changers</h2>
+      <ol>
+        <li class="fragment" data-fragment-index="1">✏️</li>
+        <li class="fragment" data-fragment-index="2">🧮</li>
+        <li class="fragment" data-fragment-index="3">🌐</li>
+        <li class="fragment" data-fragment-index="4">ChatGPT</li>
+      </ol>
+    </section>
+    <section>
+      <p>ChatGPT og lignende er helt fantastiske, meeeeeennnnnnn.</p>
+      <p>Vi kan bruge den rigtigt og forkert</p>
+    </section>
+    <section>
+      <h2>Forkert brug</h2>
+      <p>(hjælp her og nu)</p>
+      <p><span class="fragment">💩 til eksamen og i praktikken</span></p>
+    </section>
+    <section>
+      <h3>Dårlige prompts</h3>
+      <ul>
+        <li>Skriv en funktion der...</li>
+        <li>Løs min opgave</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Korrekt brug</h2>
+      <p class="fragment">("Retention" og ❤️ til eksamen og i praktikken)</p>
+    </section>
+    <section>
+      <h3>Gode prompts</h3>
+      <ul>
+        <li>Forklar hvad X gør i JavaScript</li>
+        <li>Hvad betyder den her fejl?</li>
+        <li>Hvordan virker den her kode?</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Hvad ved vi om læring?</h3>
+      <p>muscle memory</p>
+      <p>erfaring</p>
+    </section>
+    <section>
+      <p>så...</p>
+      <p>kæmp!</p>
+      <p>Vent med at tage den lette løsning</p>
+      <p>Programmering handler om at nedbryde problemer</p>
+      <p>det lærer du ikke hvis du får den leveret</p>
+      <p class="fragment">tror jeg nok</p>
     </section>
   </section>
 </SlideLayout>
