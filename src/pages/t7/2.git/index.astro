@@ -201,7 +201,7 @@ import Tree from "./components/Tree.astro";
     </section>
   </AgendaSection>
 
-  <AgendaSection header="Exercise #2">
+  <!-- <AgendaSection header="Exercise #2">
     <section>
       <ol class="striped">
         <li>Split into your study groups</li>
@@ -216,7 +216,7 @@ import Tree from "./components/Tree.astro";
         <li>...</li>
       </ol>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
 
   <AgendaSection
     header="Hooking it up to GitHub"
@@ -263,7 +263,7 @@ import Tree from "./components/Tree.astro";
     </section>
   </AgendaSection>
 
-  <AgendaSection header="Exercise #3">
+  <!--  <AgendaSection header="Exercise #3">
     <section>
       <p>We'll spread out into groups again</p>
       <p>All members try to connect their repository to GitHub</p>
@@ -272,9 +272,9 @@ import Tree from "./components/Tree.astro";
         first one is working, the rest do it
       </p>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
 
-  <AgendaSection header="Exercise #4" h3="A short interactive tour">
+  <!--  <AgendaSection header="Exercise #4" h3="A short interactive tour">
     <section>
       <h2>gitfographic&lt;3</h2>
       <p>
@@ -311,7 +311,7 @@ import Tree from "./components/Tree.astro";
         </div>
       </div>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
 
   <AgendaSection header="the stuff we do sometimes">&nbsp;</AgendaSection>
 
@@ -397,257 +397,248 @@ import Tree from "./components/Tree.astro";
   </AgendaSection>
 
   <AgendaSection header="The stuff we do" h2="all the time" />
-  &nbsp;
+
+  <AgendaSection header="Managing a single timeline">
+    <section>
+      <ol>
+        <li>add</li>
+        <li>commit</li>
+        <li>push</li>
+      </ol>
+    </section>
+    <section>
+      <h3><code>add</code></h3>
+      <p>Do you get it?</p>
+    </section>
+    <section>
+      <h3><code>commit</code></h3>
+      <p>Do you get it?</p>
+    </section>
+    <section>
+      <h3><code>push</code></h3>
+      <p>Do you get it?</p>
+    </section>
+    <section>
+      <h3>DEMO?</h3>
+      <ol>
+        <li>add</li>
+        <li>commit</li>
+        <li>push</li>
+      </ol>
+    </section>
+    <section>
+      <h3><code>push</code></h3>
+      <p>Upload our commits</p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/fa5yDJculfM"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="General Thoughts, part #1">
+    <section>
+      <h3>"Save games"</h3>
+      <p>Commits are points in history we can go back to</p>
+      <p>That's called checking out, resetting or reverting</p>
+      <div class="fragment">
+        <p>In general, if something is working, do a commit</p>
+        <p>Try to do one thing per commit</p>
+        <!-- user stories?-->
+      </div>
+    </section>
+
+    <!-- <section>
+      <p>If we haven't already, let's do it</p>
+      <p>Let's go to the whiteboard</p>
+
+      <p class="fragment">
+        Any code produced in this example is not really important, focus on git
+      </p>
+    </section> -->
+  </AgendaSection>
+
+  <!--branches -->
+  <AgendaSection>
+    <Tree slot="header-component" />
+    <section>
+      <ol>
+        <li>Creating a branch</li>
+        <li>Switching</li>
+        <li>Pushing/publishing</li>
+        <li>Merging</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Creating a branch</h2>
+    </section>
+    <section>
+      <p>
+        In order to create a branch, make sure you're on the branch you want to
+        start from!
+      </p>
+      <p>You can start from any, but for now, stick to <code>main</code></p>
+      <p class="fragment">
+        You can NOT (without issues) create a new branch if you forgot to <code
+          >add</code
+        >/<code>commit</code>
+      </p>
+    </section>
+    <section>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/CUN5hSWfPlQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </section>
+    <section>
+      <h2>Switching</h2>
+      <p>Looking at another branch</p>
+    </section>
+    <section>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/7mVa24VLjaY"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </section>
+    <section>
+      <h2>pushing</h2>
+    </section>
+    <section>
+      <p>Our new branches are only on our local machines</p>
+      <p>We should probably, if everything is allright, put them on GitHub</p>
+      <p>
+        So, we should issue a <code>push</code> and let VS Code help with the rest
+      </p>
+    </section>
+    <section>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/fnznq-sn4Io"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </section>
+    <section>
+      <h2>Merging</h2>
+    </section>
+    <section>
+      <p>
+        Make sure you've <code>add</code>'ed and <code>commit</code>'ed
+        everything before you do this
+      </p>
+    </section>
+    <section>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/-ApZNpJsgP0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </section>
+  </AgendaSection>
+
+  <!-- <AgendaSection header="Exercise #2">
+    <section>
+      <p>
+        Forking, Cloning, Switching, Merging, Adding, Commiting, Pushing,
+        Celebrating
+      </p>
+      <p>
+        <a href="https://github.com/jonasholbech/mmd2-merge-exercise"
+          >https://github.com/jonasholbech/mmd2-merge-exercise</a
+        >
+      </p>
+    </section>
+  </AgendaSection> -->
+
+  <AgendaSection header="General thoughts, part #2">
+    <section>
+      <p>It's just</p>
+      <p class="fragment">practice</p>
+      <p class="fragment">practice</p>
+      <p class="fragment">practice</p>
+    </section>
+    <section>
+      <p>NEVER WORK ON <code>MAIN</code></p>
+    </section>
+    <section>
+      <p>new feature === new branch</p>
+      <p>Commit fairly often</p>
+      <p>Branches are cheap, just make one</p>
+      <p>You can always just ignore it (no merging)</p>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="What didn't make the cut">
+    <section>
+      <ul>
+        <li>checkout</li>
+        <li>reset</li>
+        <li>revert</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3><code>checkout</code></h3>
+      <p>Looking at a point in time</p>
+      <p>You can look, but you can't (shouldn't) touch</p>
+      <video
+        height="200"
+        data-src="/assets/t7/2.git/5-switch-to-commit.webm"
+        controls></video>
+    </section>
+    <section>
+      <h3>Going back to our timeline</h3>
+      <p>Once we've looked, we can go back to our own timeline (main)</p>
+      <video height="200" data-src="/assets/t7/2.git/6-go-back.webm" controls
+      ></video>
+    </section>
+    <section>
+      <h3><code>reset</code></h3>
+      <p>Reset is destructive, so that means move back permanently (sort of)</p>
+      <video height="200" data-src="/assets/t7/2.git/7-reset.webm" controls
+      ></video>
+
+      <p>
+        <code>reset</code> is a "last option" other (and better) ways exists
+      </p>
+    </section>
+    <section>
+      <h3><code>push --force</code></h3>
+      <p>Let's imagine we've pushed everything</p>
+      <p>Then we reset locally</p>
+      <p>Now the local and remote repos are out of sync</p>
+      <p>If we try to push again we get an error</p>
+      <p>If we are REALLY sure we want to go back</p>
+      <p>We can do a forced push</p>
+      <p>But that's not for now</p>
+    </section>
+    <section>
+      <h3><code>revert</code></h3>
+      <p>Undo a specific commit</p>
+      <video height="200" data-src="/assets/t7/2.git/8-revert.webm" controls
+      ></video>
+      <p>Demo?</p>
+      <p><code>revert</code> is often better than <code>reset</code></p>
+    </section>
+  </AgendaSection>
+  <section>
+    <h2>Let's review the goals</h2>
+  </section>
 </SlideLayout>
-
-<AgendaSection header="Managing a single timeline">
-  <section>
-    <ol>
-      <li>add</li>
-      <li>commit</li>
-      <li>push</li>
-    </ol>
-  </section>
-  <section>
-    <h3><code>add</code></h3>
-    <p>Do you get it?</p>
-  </section>
-  <section>
-    <h3><code>commit</code></h3>
-    <p>Do you get it?</p>
-  </section>
-  <section>
-    <h3><code>push</code></h3>
-    <p>Do you get it?</p>
-  </section>
-  <section>
-    <h3>DEMO?</h3>
-    <ol>
-      <li>add</li>
-      <li>commit</li>
-      <li>push</li>
-    </ol>
-  </section>
-  <section>
-    <h3><code>push</code></h3>
-    <p>Upload our commits</p>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/fa5yDJculfM"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </section>
-</AgendaSection>
-
-<AgendaSection header="General Thoughts, part #1">
-  <section>
-    <h3>"Save games"</h3>
-    <p>Commits are points in history we can go back to</p>
-    <p>That's called checking out, resetting or reverting</p>
-    <div class="fragment">
-      <p>In general, if something is working, do a commit</p>
-      <p>Try to do one thing per commit</p>
-      <!-- user stories?-->
-    </div>
-  </section>
-
-  <section>
-    <p>If we haven't already, let's do it</p>
-    <p>Let's go to the whiteboard</p>
-
-    <p class="fragment">
-      Any code produced in this example is not really important, focus on git
-    </p>
-  </section>
-</AgendaSection>
-
-<!--branches -->
-<AgendaSection>
-  <Tree slot="header-component" />
-  <section>
-    <ol>
-      <li>Creating a branch</li>
-      <li>Switching</li>
-      <li>Pushing/publishing</li>
-      <li>Merging</li>
-    </ol>
-  </section>
-  <section>
-    <h2>Creating a branch</h2>
-  </section>
-  <section>
-    <p>
-      In order to create a branch, make sure you're on the branch you want to
-      start from!
-    </p>
-    <p>You can start from any, but for now, stick to <code>main</code></p>
-    <p class="fragment">
-      You can NOT (without issues) create a new branch if you forgot to <code
-        >add</code
-      >/<code>commit</code>
-    </p>
-  </section>
-  <section>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/CUN5hSWfPlQ"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </section>
-  <section>
-    <h2>Switching</h2>
-    <p>Looking at another branch</p>
-  </section>
-  <section>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/7mVa24VLjaY"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </section>
-  <section>
-    <h2>pushing</h2>
-  </section>
-  <section>
-    <p>Our new branches are only on our local machines</p>
-    <p>We should probably, if everything is allright, put them on GitHub</p>
-    <p>
-      So, we should issue a <code>push</code> and let VS Code help with the rest
-    </p>
-  </section>
-  <section>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/fnznq-sn4Io"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </section>
-  <section>
-    <h2>Merging</h2>
-  </section>
-  <section>
-    <p>
-      Make sure you've <code>add</code>'ed and <code>commit</code>'ed everything
-      before you do this
-    </p>
-  </section>
-  <section>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/-ApZNpJsgP0"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </section>
-</AgendaSection>
-
-<AgendaSection header="Exercise #5">
-  <section>
-    <p>
-      Forking, Cloning, Switching, Merging, Adding, Commiting, Pushing,
-      Celebrating
-    </p>
-    <p>
-      <a href="https://github.com/jonasholbech/mmd2-merge-exercise"
-        >https://github.com/jonasholbech/mmd2-merge-exercise</a
-      >
-    </p>
-  </section>
-</AgendaSection>
-
-<AgendaSection header="General thoughts, part #2">
-  <section>
-    <p>It's just</p>
-    <p class="fragment">practice</p>
-    <p class="fragment">practice</p>
-    <p class="fragment">practice</p>
-  </section>
-  <section>
-    <p>NEVER WORK ON <code>MAIN</code></p>
-  </section>
-  <section>
-    <p>new feature === new branch</p>
-    <p>Commit fairly often</p>
-    <p>Branches are cheap, just make one</p>
-    <p>You can always just ignore it (no merging)</p>
-  </section>
-</AgendaSection>
-
-<AgendaSection header="What didn't make the cut">
-  <section>
-    <ul>
-      <li>checkout</li>
-      <li>reset</li>
-      <li>revert</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3><code>checkout</code></h3>
-    <p>Looking at a point in time</p>
-    <p>You can look, but you can't (shouldn't) touch</p>
-    <video
-      height="200"
-      data-src="/assets/t7/2.git/5-switch-to-commit.webm"
-      controls></video>
-  </section>
-  <section>
-    <h3>Going back to our timeline</h3>
-    <p>Once we've looked, we can go back to our own timeline (main)</p>
-    <video height="200" data-src="/assets/t7/2.git/6-go-back.webm" controls
-    ></video>
-  </section>
-  <section>
-    <h3><code>reset</code></h3>
-    <p>Reset is destructive, so that means move back permanently (sort of)</p>
-    <video height="200" data-src="/assets/t7/2.git/7-reset.webm" controls
-    ></video>
-
-    <p>
-      <code>reset</code> is a "last option" other (and better) ways exists
-    </p>
-  </section>
-  <section>
-    <h3><code>push --force</code></h3>
-    <p>Let's imagine we've pushed everything</p>
-    <p>Then we reset locally</p>
-    <p>Now the local and remote repos are out of sync</p>
-    <p>If we try to push again we get an error</p>
-    <p>If we are REALLY sure we want to go back</p>
-    <p>We can do a forced push</p>
-    <p>But that's not for now</p>
-  </section>
-  <section>
-    <h3><code>revert</code></h3>
-    <p>Undo a specific commit</p>
-    <video height="200" data-src="/assets/t7/2.git/8-revert.webm" controls
-    ></video>
-    <p>Demo?</p>
-    <p><code>revert</code> is often better than <code>reset</code></p>
-  </section>
-</AgendaSection>
-<section>
-  <h2>Let's review the goals</h2>
-</section>
-<section>
-  <h2>Pause</h2>
-  <iframe
-    class="gs4"
-    src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=600"
-    width="400"
-    height="300"></iframe>
-</section>
