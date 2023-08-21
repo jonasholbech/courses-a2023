@@ -13,10 +13,10 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom", [
   "concatenation.js",
   "concatenation-interpolation.js",
 ]);
-const snippets = await codeFetcher("t7/4.objects", [
+/* const snippets = await codeFetcher("t7/4.objects", [
   "objects-templates.html",
   "objects-templates.js",
-]);
+]); */
 ---
 
 <section>

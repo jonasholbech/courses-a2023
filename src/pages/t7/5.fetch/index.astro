@@ -157,7 +157,10 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach", [
       <p>It can take time before we get the response</p>
       <p>It can take time before we get the JSON out</p>
       <p>Which gives us a new syntax to learn</p>
+      <p>And one new syntax to see</p>
     </section>
+  </AgendaSection>
+  <AgendaSection header="<code>fetch</code> - then, then">
     <section data-auto-animate>
       <h3>The syntax</h3>
       <Code
@@ -229,29 +232,7 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach", [
     </section>
   </AgendaSection>
 
-  <AgendaSection header="AJAX in action - <code>fetch</code>">
-    <section>
-      <h3><code>fetch</code></h3>
-      <p><code>fetch</code> is one of the ways we can work with AJAX in JS</p>
-      <p>It is the easiest, if we can accept a bit of "black boxing"</p>
-    </section>
-    <section>
-      <p>The process could be worse</p>
-      <ol>
-        <li>We send a request for something</li>
-        <li>We get a response (headers)</li>
-        <li>We extract the JSON from the response</li>
-        <li>We get the data</li>
-      </ol>
-      <p>(if all goes well)</p>
-    </section>
-    <section>
-      <h3>I promise you something</h3>
-      <p>The hard part comes as the process is asynchronous</p>
-      <p>It can take time before we get the response</p>
-      <p>It can take time before we get the JSON out</p>
-      <p>Which gives us a new syntax to learn</p>
-    </section>
+  <AgendaSection header="<code>fetch</code> - async / await">
     <section data-auto-animate>
       <h3>The syntax</h3>
       <Code
@@ -327,20 +308,22 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach", [
       />
       <p>and THEN we have our data</p>
     </section>
+  </AgendaSection>
+  <AgendaSection header="Black Boxing">
     <section data-auto-animate>
-      <h3>BLACK-BOXING</h3>
-      <Code
-        dataId="fetch-in-steps"
-        code={snippets["async-fetch-in-steps-part-8.js"]}
-        stretch
-      />
       <p class="fragment">
         CPM<span class="fragment">: Copy-Paste-Moment</span>
       </p>
       <p class="fragment">Should you be able to write this?</p>
       <p class="fragment">Or just know what to change?</p>
       <p class="fragment">What should change?</p>
-      <p class="fragment">Should we ask ChatGPT?</p>
+      <div class="fragment">
+        <Code
+          dataId="fetch-in-steps"
+          code={snippets["fetch-in-steps-part-7.js"]}
+          stretch
+        />
+      </div>
     </section>
   </AgendaSection>
 </SlideLayout>
