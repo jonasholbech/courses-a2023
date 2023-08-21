@@ -3,11 +3,27 @@ import SlideLayout from "../../../layouts/SlideLayout.astro";
 import AgendaSection from "../../../components/AgendaSection.astro";
 import Goal from "../../../components/Goal.astro";
 import Tree from "./components/Tree.astro";
+import SlideControls from "../../../components/SlideControls.astro";
 ---
 
 <SlideLayout title="Git">
   <section>
     <h1><code>git</code></h1>
+  </section>
+  <section>
+    <h2>Jonas Holbech</h2>
+    <p class="fragment">jofh@kea.dk</p>
+    <p class="fragment">Cand. IT</p>
+    <p class="fragment">Web, web, web, web, siden 2005</p>
+    <p class="fragment">
+      Selvstændig, reklamebureau, product owner, undervisning
+    </p>
+    <p class="fragment">Tre børn (crazy svært at møde klokken 8:30)</p>
+    <p class="fragment">Frivillig i Coding Pirates</p>
+    <p class="fragment">Anstrengt forhold til danske slides</p>
+  </section>
+  <section>
+    <SlideControls />
   </section>
   <Goal>
     <ol>
@@ -36,12 +52,9 @@ import Tree from "./components/Tree.astro";
       <li>git, what is it</li>
       <li>Prerequisites</li>
       <li>Let's memorize some words</li>
-      <li>Setting up a project</li>
-      <li>Adding & commiting</li>
-      <li>Pushing</li>
-      <li>branch out, merge, switch</li>
-      <li>Checkout</li>
-      <li>Resetting</li>
+      <li>Re-cap</li>
+      <li>Extras</li>
+      <li>Assignments / Exercises</li>
     </ol>
   </section>
   <AgendaSection header="git, what is it">
@@ -133,9 +146,16 @@ import Tree from "./components/Tree.astro";
             <li><code>.gitignore</code></li>
             <li><code>branch</code></li>
             <li><code>merge</code></li>
+            <li><code>switch</code></li>
           </ul>
         </div>
+        <div class="col-4">
+          <p>In your study groups; Define the terms in your own words</p>
+          <p>What do they do?</p>
+          <p>When do you use them</p>
+        </div>
       </div>
+
       <p><small>https://jonasholbech.github.io/gitfographic3/</small></p>
     </section>
   </AgendaSection>
@@ -203,23 +223,6 @@ import Tree from "./components/Tree.astro";
     </section>
   </AgendaSection>
 
-  <!-- <AgendaSection header="Exercise #2">
-    <section>
-      <ol class="striped">
-        <li>Split into your study groups</li>
-        <li>
-          Player A: follow the steps above, talk each other through the process.
-          Then...
-        </li>
-        <li>
-          Player B: follow the steps above, talk each other through the process.
-          Then ...
-        </li>
-        <li>...</li>
-      </ol>
-    </section>
-  </AgendaSection> -->
-
   <AgendaSection
     header="Hooking it up to GitHub"
     p='<span style="display:block;" class="fragment">Backing up</span><span style="display:block;" class="fragment">Preparing for collaboration</span>'
@@ -264,17 +267,6 @@ import Tree from "./components/Tree.astro";
       <p>That was the setup, with practice, this can be done in 5 minutes</p>
     </section>
   </AgendaSection>
-
-  <!--  <AgendaSection header="Exercise #3">
-    <section>
-      <p>We'll spread out into groups again</p>
-      <p>All members try to connect their repository to GitHub</p>
-      <p>
-        My suggestion: Player A goes first and the others help out. When the
-        first one is working, the rest do it
-      </p>
-    </section>
-  </AgendaSection> -->
 
   <!--  <AgendaSection header="Exercise #4" h3="A short interactive tour">
     <section>
@@ -638,6 +630,15 @@ import Tree from "./components/Tree.astro";
       ></video>
       <p>Demo?</p>
       <p><code>revert</code> is often better than <code>reset</code></p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Your tasks">
+    <section>
+      <p>Fronter:</p>
+      <ol>
+        <li>"Leg med Git" in study groups</li>
+        <li>"Merge exercise" inddividually</li>
+      </ol>
     </section>
   </AgendaSection>
   <section>
