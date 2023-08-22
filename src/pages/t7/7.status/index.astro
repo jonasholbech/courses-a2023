@@ -1,0 +1,58 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
+const snippets = await codeFetcher("t7/7.status", []);
+---
+
+<SlideLayout title="Status">
+  <section>
+    <h1>Status</h1>
+    <h3>jofh@kea.dk</h3>
+  </section>
+  <section>
+    <Goal>
+      <ol>
+        <li>TODO:</li>
+      </ol>
+    </Goal>
+  </section>
+
+  <AgendaSection header="Exercise" p={'Fronter: "4. Superhero list, #2"'}>
+    <section>
+      <h2>Bonus exercise</h2>
+      <p>Aren't you lucky</p>
+      <ul>
+        <li>
+          If you forked before you cloned you can now <var
+            >add =&gt; commit =&gt; push</var
+          > directly
+        </li>
+        <li>DO IT</li>
+        <li>Since it's now YOUR repository, we can turn on GitHub Pages</li>
+        <li>
+          <a href="https://youtu.be/DSfIkMgDUo0"
+            >Follow the instructions in this link</a
+          >
+        </li>
+      </ul>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Let's review the goals" />
+  <AgendaSection header="+2">
+    <section>
+      <h2>Your +2</h2>
+      <ol>
+        <li class="fragment">Article: Labels are a last resort</li>
+        <li class="fragment">Article: Steve Schoeger Tweets</li>
+        <li class="fragment">
+          Video: "The Google History of a High-Paid Sr. Engineer
+        </li>
+        <li class="fragment">Task: 5. cloning / templating</li>
+      </ol>
+    </section>
+  </AgendaSection>
+</SlideLayout>
