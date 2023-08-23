@@ -4,7 +4,7 @@ const items = [
     pets: 6,
   },
   {
-    name: "Lasse",
+    name: "Martin",
     pets: 0,
   },
 ];
