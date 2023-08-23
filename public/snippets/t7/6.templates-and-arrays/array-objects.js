@@ -1,14 +1,14 @@
 const kids = [
   {
     name: "Storm",
-    age: 12,
+    age: 13,
   },
   {
     name: "Birk",
-    age: 10,
+    age: 11,
   },
   {
     name: "Liv",
-    age: 5,
+    age: 6,
   },
 ];
