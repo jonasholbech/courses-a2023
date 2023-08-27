@@ -2,7 +2,8 @@
 import SlideLayout from "../../../layouts/SlideLayout.astro";
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
-const snippets = await codeFetcher("t7/7.url-parameters", [
+import AgendaSection from "../../../components/AgendaSection.astro";
+const snippets = await codeFetcher("t7/8.url-parameters", [
   "urlsearchparams.js",
   "urlsearchparams-condition.js",
 ]);
@@ -133,10 +134,15 @@ myfile.html?name=Jonas&friend=Lasse&class=2nd&topic=js
       </p>
     </section>
   </section>
+  <AgendaSection header="Thunder Client">
+    <section>
+      <p>A brief demonstration</p>
+    </section>
+  </AgendaSection>
   <section>
     <section>
       <h1>Exercise</h1>
-      <p>2. URL Parameters and our API</p>
+      <p>1. URL Parameters and our API</p>
     </section>
   </section>
   <section>
@@ -175,7 +181,7 @@ myfile.html?name=Jonas&friend=Lasse&class=2nd&topic=js
   </section>
   <section>
     <h1>Excercise</h1>
-    <p>3. URL parameters and passing data</p>
+    <p>2. URL parameters and passing data</p>
   </section>
   <section>
     <section>
@@ -206,9 +212,10 @@ myfile.html?name=Jonas&friend=Lasse&class=2nd&topic=js
         alt=""
       />
     </section>
-    <section>
-      <p>let's take a look at my code</p>
-      <p>And see what needs to be done</p>
-    </section>
   </section>
+  <AgendaSection header="Exercise #3">
+    <section>
+      <p>nummer 3 på fronter :-)</p>
+    </section>
+  </AgendaSection>
 </SlideLayout>
