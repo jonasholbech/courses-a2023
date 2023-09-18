@@ -216,6 +216,10 @@ rect {
 .reveal a {
   color: #aa6932;
 }
+.reveal pre code {
+  max-height: calc(var(--slide-height) - 50px);
+}
+
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled,
 .reveal .controls .navigate-right,

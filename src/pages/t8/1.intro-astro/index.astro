@@ -6,25 +6,31 @@ import Explainer from "../../../components/Explainer.svelte";
 import AgendaSection from "../../../components/AgendaSection.astro";
 import Goal from "../../../components/Goal.astro";
 
-const snippets = await codeFetcher("t8/1.intro-astro", []);
+const snippets = await codeFetcher("t8/1.intro-astro", [
+  "from-html-to-astro-1.txt",
+  "from-html-to-astro-1.1.txt",
+  "from-html-to-astro-1.2.txt",
+  "from-html-to-astro-2.txt",
+  "from-html-to-astro-3.txt",
+]);
 ---
 
 <SlideLayout title="Astro">
   <AgendaSection header="Astro">
     <section>
-      <a href="https://astro.build">https://astro.build</a>
+      <p>
+        <a
+          href="https://www.figma.com/file/SvJQh71RpEmzAHCFuqIs4o/Untitled?type=design&node-id=0%3A1&mode=design&t=ViCCYZvfwEuUVItv-1"
+          >Et dumt design</a
+        >
+      </p>
+      <p>+</p>
+      <p><a href="https://astro.build">https://astro.build</a></p>
+      <p>=</p>
+      <p>DX</p>
     </section>
   </AgendaSection>
-  <section>
-    <Goal>
-      <ol>
-        <li>Recognize components</li>
-        <li>Use components</li>
-        <li>Use props</li>
-        <li>Style components</li>
-      </ol>
-    </Goal>
-  </section>
+
   <AgendaSection header="Hvad er Astro">
     <section>
       <ul>
@@ -37,15 +43,76 @@ const snippets = await codeFetcher("t8/1.intro-astro", []);
     <section>
       <h2>Derfor!</h2>
       <ol>
-        <li>Astro er en <code>static site generator</code></li>
-        <li class="fragment">
+        <li>
           I Astro arbejder vi med components. Små isolerede kode blokke der kan
-          stykkes sammen og genbruges. Lidt ligesom templates
+          stykkes sammen og genbruges.
         </li>
+        <li class="fragment">Og ALLE bruger components ude i virkeligheden</li>
+        <li class="fragment"><code>template</code> er lidt en component</li>
+        <li class="fragment">Astro er en <code>static site generator</code></li>
         <li class="fragment">Statiske sites er hurtigere</li>
         <li class="fragment">Og mere bæredygtige</li>
       </ol>
     </section>
+  </AgendaSection>
+
+  <!-- <AgendaSection header="Hvordan kommer vi fra HTML til Astro?">
+    <section data-auto-animate>
+      <Code
+        code={snippets["from-html-to-astro-1.txt"]}
+        language="html"
+        startFrom="1"
+        dataId="html2astro"
+      />
+    </section>
+    <section data-auto-animate>
+      <Code
+        code={snippets["from-html-to-astro-1.1.txt"]}
+        language="html"
+        startFrom="1"
+        dataId="html2astro"
+      />
+    </section>
+    <section data-auto-animate>
+      <Code
+        code={snippets["from-html-to-astro-1.2.txt"]}
+        language="html"
+        startFrom="1"
+        dataId="html2astro"
+      />
+    </section>
+    <section data-auto-animate>
+      <Code
+        code={snippets["from-html-to-astro-2.txt"]}
+        language="html"
+        startFrom="1"
+        dataId="html2astro"
+      />
+    </section>
+    <section data-auto-animate>
+      <Code
+        code={snippets["from-html-to-astro-3.txt"]}
+        language="html"
+        startFrom="1"
+        dataId="html2astro"
+      />
+    </section>
+  </AgendaSection> -->
+  <AgendaSection header="Advarsler">
+    <section>
+      <ol>
+        <li>
+          Astro laver en mappe kaldet <code>node_modules</code>, lad den være!
+        </li>
+        <li>
+          Lad være med at lægge jeres Astro projekter i Dropbox, Drive, OneDrive
+          etc
+        </li>
+        <li>Jeres "site" mappe må IKKE hedde <code>UI/UX</code> (skråstreg)</li>
+      </ol>
+    </section>
+  </AgendaSection>
+  <!-- <AgendaSection header="Hvad er Astro">
     <section>
       <h4><code>static site generator?</code></h4>
       <p>
@@ -183,7 +250,7 @@ const snippets = await codeFetcher("t8/1.intro-astro", []);
       <p>Intro til opgaven</p>
       <p>Status møde klokken 10:30</p>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
 </SlideLayout>
 
 <!--
