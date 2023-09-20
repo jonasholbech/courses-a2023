@@ -17,7 +17,7 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
 
 <SlideLayout title="Astro">
   <AgendaSection header="Astro">
-    <section>
+    <!-- <section>
       <p>
         <a
           href="https://www.figma.com/file/SvJQh71RpEmzAHCFuqIs4o/Untitled?type=design&node-id=0%3A1&mode=design&t=ViCCYZvfwEuUVItv-1"
@@ -28,10 +28,10 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
       <p><a href="https://astro.build">https://astro.build</a></p>
       <p>=</p>
       <p><a href="https://github.com/jonasholbech/figma-2-astro">DX</a></p>
-    </section>
+    </section> -->
   </AgendaSection>
 
-  <AgendaSection header="Hvad er Astro">
+  <!-- <AgendaSection header="Hvad er Astro">
     <section>
       <ul>
         <li>1. semester lavede i "statiske sites"</li>
@@ -56,7 +56,7 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
     </section>
   </AgendaSection>
 
-  <!-- <AgendaSection header="Hvordan kommer vi fra HTML til Astro?">
+  <AgendaSection header="Hvordan kommer vi fra HTML til Astro?">
     <section data-auto-animate>
       <Code
         code={snippets["from-html-to-astro-1.txt"]}
@@ -98,6 +98,7 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
       />
     </section>
   </AgendaSection> -->
+
   <AgendaSection header="Advarsler">
     <section>
       <ol>
@@ -154,16 +155,18 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
     <section>
       <p>Nu skriver i kode der ikke virker i browseren!!</p>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
   <AgendaSection header="Øvelse #1">
     <section>
       <h3>Se components</h3>
       <p>Hvad er en component?</p>
       <ol>
-        <li>En genbrugelig skabelon</li>
+        <li>
+          En genbrugelig skabelon (skal noget bruges på flere sider/steder?)
+        </li>
         <li>Der (som en funktion) kan modtage data</li>
         <li>Vise dataen, og handle på baggrund af data</li>
-        <li>Men alt kan gøres til en component</li>
+        <li>Alt kan gøres til en component (me det vil vi nok ikke)</li>
       </ol>
     </section>
     <section>
@@ -182,7 +185,6 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
     <section>
       <h2>Jeres tur</h2>
       <p>15 minutter</p>
-      <p>Breakout rooms?</p>
       <p>Identificér components på de to billeder</p>
     </section>
     <section>
@@ -192,7 +194,7 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
       <img data-src="/assets/t8/1.intro-astro/spotify.webp" alt="" />
     </section>
   </AgendaSection>
-  <AgendaSection header="<code>node.js</code>">
+  <!-- <AgendaSection header="<code>node.js</code>">
     <section>
       <p>
         Open source server-miljø der kan køre på Windows, Linux, Unix, macOS
@@ -211,7 +213,7 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
       <p>Det API i arbejde op i mod i starten af T7 var skrevet i node.js</p>
       <p></p>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
   <AgendaSection h2="<code>node_modules</code>">
     <section>
       <p>
@@ -236,21 +238,28 @@ const snippets = await codeFetcher("t8/1.intro-astro", [
       <p>Det går "sinds" langsomt <span class="fragment">🤣</span></p>
       <p>Det laver sygt mange problemer</p>
     </section>
-    <section>
+    <!-- <section>
       <p><kbd>.nosync</kbd></p>
       <p class="fragment">Dannie?</p>
-    </section>
+    </section> -->
     <section>
       <p>Der findes en let måde at rydde op i <code>node_modules</code></p>
       <p>Men den tager vi en anden dag når vi har lidt erfaring</p>
     </section>
   </AgendaSection>
+  <AgendaSection header="Live Code">
+    <section>
+      <p>Lad os kode til af Products R Us</p>
+      <p>Vil i skrive med (langsomt)</p>
+      <p>Kigge med (hurtigt) <code class="fragment">Vi kan optage det</code></p>
+    </section>
+  </AgendaSection>
   <AgendaSection header="Øvelse #2">
     <section>
       <p>Intro til opgaven</p>
-      <p>Status møde klokken 10:30</p>
+      <p>Status møde klokken <span contenteditable="">10:30</span></p>
     </section>
-  </AgendaSection> -->
+  </AgendaSection>
 </SlideLayout>
 
 <!--
