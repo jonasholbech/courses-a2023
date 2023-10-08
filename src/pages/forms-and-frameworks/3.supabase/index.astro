@@ -53,7 +53,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
     </section>
   </AgendaSection>
 
-  <AgendaSection header="Exercise #1">
+  <!-- <AgendaSection header="Exercise #1">
     <section>
       <ol>
         <li>
@@ -66,9 +66,9 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         <li>Set the location to Frankfurt or something closer</li>
       </ol>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
 
-  <AgendaSection header="A quick tour of supabase">
+  <!-- <AgendaSection header="A quick tour of supabase">
     <section>
       <ol>
         <li>Home</li>
@@ -79,8 +79,8 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         <li>Settings</li>
       </ol>
     </section>
-  </AgendaSection>
-  <AgendaSection header="A quick introduction to data modelling">
+  </AgendaSection> -->
+  <!-- <AgendaSection header="A quick introduction to data modelling">
     <section>
       <p>Lets draw some relations</p>
       <p><small>Relations are hard, and not required</small></p>
@@ -111,8 +111,8 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         <li>Add a few rows</li>
       </ol>
     </section>
-  </AgendaSection>
-  <section>
+  </AgendaSection> -->
+  <!-- <section>
     <h3>Asking for data</h3>
     <p>This is a little confusing initially</p>
     <p>
@@ -120,7 +120,17 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         >The API Tab =&gt; and our database =&gt; and then "Bash"</kbd
       >
     </p>
-  </section>
+  </section> -->
+  <AgendaSection header="Setting permissions">
+    <section>
+      <p>
+        We need to tell Supabase that it's OK for EVERYONE to access, delete and
+        modify our content!
+      </p>
+      <p>A god idea? usually NO</p>
+      <p>Let's create out table</p>
+    </section>
+  </AgendaSection>
   <AgendaSection header="<code>GET</code>">
     <section>
       <h3>Sending the API key and our first REST request</h3>
@@ -130,11 +140,11 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       />
     </section>
     <section>
-      <h3>Insomnia</h3>
+      <h3>Thunder Client</h3>
       <ul>
         <li>
-          Insomnia is a "request testing tool" <small class="fragment"
-            >like Postman</small
+          Thunder Client is a "request testing tool" <small class="fragment"
+            >like Postman and Insomnia</small
           >
         </li>
         <li>It allows us to test our database, without writing code</li>
@@ -143,12 +153,18 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       </ul>
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #3">
+  <AgendaSection header="Exercise #1">
     <section>
       <ol>
-        <li>Install <a href="https://insomnia.rest/">Insomnia</a></li>
         <li>
-          Setup a GET request in Insomnia to fetch the data from your own table
+          Install <a
+            href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
+            >Thunder Client</a
+          >
+        </li>
+        <li>
+          Setup a GET request in Thunder Client to fetch the data from your own
+          table
         </li>
       </ol>
       <iframe
@@ -168,7 +184,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       />
     </section>
     <section>
-      <p>And this is how it looks in Insomnia</p>
+      <p>And this is roughly how it looks in Thunder Client</p>
       <img
         data-src="/assets/forms-and-frameworks/3.supabase/insomnia-post-body.png"
         alt=""
@@ -179,10 +195,13 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       />
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #4">
+  <AgendaSection header="Exercise #3">
     <section>
       <ol>
-        <li>See if you can make a POST request to your database</li>
+        <li>
+          See if you can make a POST request from Thunder CLient to your
+          database
+        </li>
         <li>Check you GET request to see your new data</li>
       </ol>
       <iframe
@@ -191,7 +210,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         height="400"></iframe>
     </section>
     <section>
-      <h2>Demonstration for #4?</h2>
+      <h2>Demonstration for #3?</h2>
     </section>
   </AgendaSection>
   <AgendaSection header="<code>DELETE</code>">
@@ -199,10 +218,10 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       <Code language="javascript" code={snippets["supabase-fetch-delete.js"]} />
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #5">
+  <AgendaSection header="Exercise #4">
     <section>
       <ol>
-        <li>See if you can make a DELETE request in Insomnia</li>
+        <li>See if you can make a DELETE request in Thunder Client</li>
         <li>
           Note that you need to specify which item to delete, so the url will
           look something like this:
@@ -215,7 +234,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         height="400"></iframe>
     </section>
     <section>
-      <h2>Demonstration for #5</h2>
+      <h2>Demonstration for #4</h2>
       <p>?</p>
     </section>
   </AgendaSection>
@@ -226,7 +245,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
     </section>
   </AgendaSection>
 
-  <AgendaSection header="Exercise #6">
+  <AgendaSection header="Exercise #5">
     <section>
       <ol>
         <li>See if you can make a PATCH request to your database</li>
@@ -237,17 +256,26 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         height="400"></iframe>
     </section>
     <section>
-      <h2>Demonstration #6</h2>
+      <h2>Demonstration #5</h2>
       <p>?</p>
     </section>
   </AgendaSection>
   <AgendaSection header="Exporting code">
     <section>
-      <img
+      <!-- <img
         data-src="/assets/forms-and-frameworks/3.supabase/insomnia-export-code.png"
         alt=""
-      />
+      /> -->
+      <p>Just find the <code>{`{}`}</code> symbol when you've run a request</p>
     </section>
+  </AgendaSection>
+  <AgendaSection header="Exercise #6">
+    <p>
+      Take the generated code snippets (GET, POST, PATCH, DELETE) and wrap each
+      one in a function
+    </p>
+    <p>(delete is a reserved word in JS)</p>
+    <p>And why not export each function</p>
   </AgendaSection>
   <AgendaSection header="let's build something" p="If we have the time" />
   <AgendaSection header="Your +4" />
