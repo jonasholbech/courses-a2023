@@ -80,7 +80,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       </ol>
     </section>
   </AgendaSection> -->
-  <!-- <AgendaSection header="A quick introduction to data modelling">
+  <AgendaSection header="A quick introduction to data modelling">
     <section>
       <p>Lets draw some relations</p>
       <p><small>Relations are hard, and not required</small></p>
@@ -98,39 +98,46 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         </ul>
       </div>
     </section>
+  </AgendaSection>
+  <AgendaSection header="Exercise #1" p="together">
     <section>
-      <p>And let's build a table in supabase</p>
+      <p>Let's model the data for this week</p>
+      <p>
+        <a
+          href="https://excalidraw.com/#json=5156854942400512,UYWQRUDm--M78tdmAX99vw"
+          >Excalidraw</a
+        >
+      </p>
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #2">
-    <section>
-      <ol>
-        <li>Go build a table in supabase</li>
-        <li>Keep it relatively simple</li>
-        <li>e.g. few fields, simple data types</li>
-        <li>Add a few rows</li>
-      </ol>
-    </section>
-  </AgendaSection> -->
-  <!-- <section>
-    <h3>Asking for data</h3>
-    <p>This is a little confusing initially</p>
-    <p>
-      Let's take a look at <kbd
-        >The API Tab =&gt; and our database =&gt; and then "Bash"</kbd
-      >
-    </p>
-  </section> -->
   <AgendaSection header="Setting permissions">
     <section>
       <p>
         We need to tell Supabase that it's OK for EVERYONE to access, delete and
         modify our content!
       </p>
+      <p>
+        <img
+          src="/assets/forms-and-frameworks/3.supabase/supabase-rls.png"
+          alt=""
+        />
+      </p>
       <p>A god idea? usually NO</p>
-      <p>Let's create out table</p>
     </section>
   </AgendaSection>
+  <AgendaSection header="Exercise #2">
+    <section>
+      <ol>
+        <li>Go build the table in supabase</li>
+        <li>Add a few rows</li>
+      </ol>
+      <iframe
+        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=900"
+        width="300"
+        height="400"></iframe>
+    </section>
+  </AgendaSection>
+
   <AgendaSection header="<code>GET</code>">
     <section>
       <h3>Sending the API key and our first REST request</h3>
@@ -153,7 +160,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       </ul>
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #1">
+  <AgendaSection header="Exercise #3">
     <section>
       <ol>
         <li>
@@ -186,16 +193,18 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
     <section>
       <p>And this is roughly how it looks in Thunder Client</p>
       <img
-        data-src="/assets/forms-and-frameworks/3.supabase/insomnia-post-body.png"
+        data-src="/assets/forms-and-frameworks/3.supabase/thunder-client-post-1.png"
+        width="300"
         alt=""
       />
       <img
-        data-src="/assets/forms-and-frameworks/3.supabase/insomnia-post-headers.png"
+        width="300"
+        data-src="/assets/forms-and-frameworks/3.supabase/thunder-client-post-2.png"
         alt=""
       />
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #3">
+  <AgendaSection header="Exercise #4">
     <section>
       <ol>
         <li>
@@ -210,7 +219,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         height="400"></iframe>
     </section>
     <section>
-      <h2>Demonstration for #3?</h2>
+      <h2>Demonstration for #4?</h2>
     </section>
   </AgendaSection>
   <AgendaSection header="<code>DELETE</code>">
@@ -218,15 +227,14 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       <Code language="javascript" code={snippets["supabase-fetch-delete.js"]} />
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #4">
+  <AgendaSection header="Exercise #5">
     <section>
       <ol>
         <li>See if you can make a DELETE request in Thunder Client</li>
         <li>
           Note that you need to specify which item to delete, so the url will
-          look something like this:
+          look something like this:<br /><code>.../rest/v1/todos?id=eq.3</code>
         </li>
-        <li><code>.../rest/v1/todos?id=eq.3</code></li>
       </ol>
       <iframe
         src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=1200"
@@ -234,7 +242,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         height="400"></iframe>
     </section>
     <section>
-      <h2>Demonstration for #4</h2>
+      <h2>Demonstration for #5</h2>
       <p>?</p>
     </section>
   </AgendaSection>
@@ -245,10 +253,14 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
     </section>
   </AgendaSection>
 
-  <AgendaSection header="Exercise #5">
+  <AgendaSection header="Exercise #6">
     <section>
       <ol>
         <li>See if you can make a PATCH request to your database</li>
+        <li>
+          Note that you need to specify which item to PATCH, so the url will
+          look something like this:<br /><code>.../rest/v1/todos?id=eq.3</code>
+        </li>
       </ol>
       <iframe
         src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=1200"
@@ -256,7 +268,7 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
         height="400"></iframe>
     </section>
     <section>
-      <h2>Demonstration #5</h2>
+      <h2>Demonstration #6</h2>
       <p>?</p>
     </section>
   </AgendaSection>
@@ -269,13 +281,15 @@ const snippets = await codeFetcher("forms-and-frameworks/3.supabase", [
       <p>Just find the <code>{`{}`}</code> symbol when you've run a request</p>
     </section>
   </AgendaSection>
-  <AgendaSection header="Exercise #6">
-    <p>
-      Take the generated code snippets (GET, POST, PATCH, DELETE) and wrap each
-      one in a function
-    </p>
-    <p>(delete is a reserved word in JS)</p>
-    <p>And why not export each function</p>
+  <AgendaSection header="Exercise #7">
+    <section>
+      <p>
+        Take the generated code snippets (GET, POST, PATCH, DELETE) and wrap
+        each one in a function
+      </p>
+      <p>(delete is a reserved word in JS)</p>
+      <p>And why not export each function</p>
+    </section>
   </AgendaSection>
   <AgendaSection header="let's build something" p="If we have the time" />
   <AgendaSection header="Your +4" />
