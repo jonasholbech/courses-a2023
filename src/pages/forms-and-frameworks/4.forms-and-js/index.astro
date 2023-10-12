@@ -4,9 +4,10 @@ import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 import AgendaSection from "../../../components/AgendaSection.astro";
 import Goal from "../../../components/Goal.astro";
-const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
-  "form.elements.txt",
-  "form.elements.js",
+const snippets = await codeFetcher("forms-and-frameworks/4.forms-and-js", [
+  /* "form.elements.txt",
+  "form.elements.js", */
+  "formData.js",
   "preventDefault.js",
   "reportValidity.js",
   "checkValidity.js",
@@ -47,7 +48,8 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
     <h2>Principle Of Least Power</h2>
     <p>
       <a href="https://www.w3.org/DesignIssues/Principles.html"
-        >https://www.w3.org/DesignIssues/Principles.html</a>
+        >https://www.w3.org/DesignIssues/Principles.html</a
+      >
     </p>
     <p class="fragment">CSS is f'ing powerful</p>
     <pre class="fragment"><code class="css">div:hover ul>li </code></pre>
@@ -65,9 +67,11 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
     <section>
       <p>Grabbing elements in the form is "easy" (sorry)</p>
       <pre><code class="js">const emailField = document.querySelector("input[type=email]");</code></pre>
-      <p>But another option exists</p>
+      <p>And grabbing the value is easy as well</p>
+      <pre><code>emailField.value;</code></pre>
+      <p>But other options exists</p>
     </section>
-    <section>
+    <!-- <section>
       <h3><code>form.elements</code></h3>
       <p>Basics:</p>
       <ol>
@@ -91,7 +95,7 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
       <h3><code>form.elements</code> #2</h3>
       <Code code={snippets["form.elements.txt"]} language="html" />
       <Code code={snippets["form.elements.js"]} />
-    </section>
+    </section> -->
   </AgendaSection>
 
   <AgendaSection header="Reading / Setting">
@@ -100,7 +104,8 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
       <p><code>.value</code></p>
       <p>
         This allows us to read / write to the field, just like <code
-          >.textContent</code>
+          >.textContent</code
+        >
       </p>
       <pre><code class="js">someField.value="Hi mom";</code></pre>
       <p>Let's look at a few examples (including &lt;select&gt;)</p>
@@ -126,8 +131,9 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
       <p>There's also a list of methods we can use on our form elements</p>
       <p>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement#Methods"
-          >https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement#Methods</a>
+          href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement#instance_methods"
+          >https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement#instance_methods</a
+        >
       </p>
     </section>
   </AgendaSection>
@@ -136,7 +142,8 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
     <section>
       <p>
         <a href="https://developer.mozilla.org/en-US/docs/Web/Events"
-          >https://developer.mozilla.org/en-US/docs/Web/Events</a>
+          >https://developer.mozilla.org/en-US/docs/Web/Events</a
+        >
       </p>
     </section>
     <section>
@@ -154,7 +161,8 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
       <p>
         Play with the <a
           href="https://jonasholbech.github.io/form-validation-interactive/"
-          >The Awesome Form Event Playground</a>
+          >The Awesome Form Event Playground</a
+        >
       </p>
       <p>Then build a credit card input thing</p>
       <ol>
@@ -166,35 +174,65 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
     </section>
   </AgendaSection>
 
-  <section>
-    <h3><code>.preventDefault()</code></h3>
-    <div class="code_footprint small">
-      <div>
-        <h4>Usable on:</h4>
-        <ul>
-          <li><code>form</code></li>
-          <li><code>element</code></li>
-        </ul>
+  <AgendaSection header="<code>new FormData()</code>">
+    <section>
+      <p>One of the easier ways of working with forms is through</p>
+      <pre><code class="js">const formData = new FormData(form)</code></pre>
+    </section>
+    <section>
+      <Code
+        code={snippets["formData.js"]}
+        lineNumbers="*|7-8|2,11|3-4,12|5,13"
+      />
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="<code>submit</code>">
+    <section>
+      <p>
+        The event that happens when a user sends the form is called <code
+          >submit</code
+        >
+      </p>
+      <p>which causes a browser refresh</p>
+      <p class="fragment">
+        If we want to pick up the data, we need to prevent that
+      </p>
+    </section>
+    <section>
+      <h3><code>.preventDefault()</code></h3>
+      <div class="code_footprint small">
+        <div>
+          <h4>Usable on:</h4>
+          <ul>
+            <li><code>form</code></li>
+            <li><code>element</code></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Returns</h4>
+          <ul>
+            <li><code>nothing</code></li>
+          </ul>
+        </div>
+        <div class="purpose">
+          <h4>Purpose</h4>
+          <p>
+            <strong
+              >Must be used together with <code>.addEventListener</code>
+            </strong>
+          </p>
+          <p>Prevent the default action from happening</p>
+          <p>On a form it means submit, on a link it means "follow" etc</p>
+        </div>
       </div>
-      <div>
-        <h4>Returns</h4>
-        <ul>
-          <li><code>nothing</code></li>
-        </ul>
-      </div>
-      <div class="purpose">
-        <h4>Purpose</h4>
-        <p>
-          <strong
-            >Must be used together with <code>.addEventListener</code>
-          </strong>
-        </p>
-        <p>Prevent the default action from happening</p>
-        <p>On a form it means submit, on a link it means "follow" etc</p>
-      </div>
-    </div>
-    <Code code={snippets["preventDefault.js"]} />
-  </section>
+      <Code code={snippets["preventDefault.js"]} />
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Now we know enough!">
+    <section>Let's play</section>
+  </AgendaSection>
 
   <AgendaSection header="Custom validation" h2="Custom messages">
     <section>
@@ -337,26 +375,31 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
       <li>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes"
-          >https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes</a>
+          >https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes</a
+        >
       </li>
       <li>
         <a
           href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation"
-          >https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation</a>
+          >https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation</a
+        >
       </li>
       <li>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements"
-          >https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements</a>
+          >https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements</a
+        >
       </li>
       <li>
         <a
           href="https://itnext.io/https-medium-com-joshstudley-form-field-validation-with-html-and-a-little-javascript-1bda6a4a4c8c"
-          >https://itnext.io/https-medium-com-joshstudley-form-field-validation-with-html-and-a-little-javascript-1bda6a4a4c8c</a>
+          >https://itnext.io/https-medium-com-joshstudley-form-field-validation-with-html-and-a-little-javascript-1bda6a4a4c8c</a
+        >
       </li>
       <li>
         <a href="https://unmanner.github.io/imaskjs/"
-          >https://unmanner.github.io/imaskjs/</a>
+          >https://unmanner.github.io/imaskjs/</a
+        >
       </li>
     </ul>
   </section>
@@ -374,8 +417,9 @@ const snippets = await codeFetcher("forms-and-frameworks/5.forms-and-js", [
       <div class="fragment">
         <p>My Form, with the JS from day one</p>
         <p>
-          <a href="https://github.com/jonasholbech/wines-vite"
-            >https://github.com/jonasholbech/wines-vite</a>
+          <a href="https://github.com/jonasholbech/petCemetary"
+            >https://github.com/jonasholbech/petCemetary</a
+          >
         </p>
       </div>
     </section>
