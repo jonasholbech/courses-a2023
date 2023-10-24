@@ -15,7 +15,8 @@ const snippets = await codeFetcher(
     "simple-props.jsx", 
     "simple-props.txt",
     "props1.jsx", 
-    "props2.jsx"
+    "props2.jsx",
+    "prop-types.js"
 ]
 );
 ---
@@ -135,6 +136,14 @@ const snippets = await codeFetcher(
         <p>Styling in React CAN be as we're used to</p>
         <p><code>App.jsx</code> imports <code>App.css</code> and we go from there</p>
         <p>Just remember kids; it's <code>className</code> not <code>class</code></p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Prop-types">
+    <section>
+      <Code
+        code={snippets["prop-types.js"]}
+        language="js"
+      />
     </section>
   </AgendaSection>
   <AgendaSection header="Let's play" />
