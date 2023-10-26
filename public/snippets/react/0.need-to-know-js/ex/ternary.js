@@ -1,4 +1,4 @@
-const age = 43;
+const age = 45;
 const email = "jofh@kea.dk";
 
 let isEven;

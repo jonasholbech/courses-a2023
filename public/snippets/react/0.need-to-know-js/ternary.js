@@ -3,7 +3,7 @@
 /*pseudo code: 
 let returned = condition ? returnedIfTrue : returnedIfFalse;
 */
-const age = 43;
+const age = 45;
 
 const status = age > 18 ? "old" : "young";
 

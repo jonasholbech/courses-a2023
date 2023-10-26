@@ -1,7 +1,7 @@
 const me = {
   name: "Jonas",
   email: "jofh@kea.dk",
-  age: 43,
+  age: 45,
 };
 
 //pick out name and email

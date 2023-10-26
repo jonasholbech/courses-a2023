@@ -1,11 +1,11 @@
 const users = [
   {
     name: "Jonas",
-    age: 43,
+    age: 45,
   },
   {
     name: "Birk",
-    age: 10,
+    age: 11,
   },
 ];
 
