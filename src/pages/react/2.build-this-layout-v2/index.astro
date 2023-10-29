@@ -19,6 +19,8 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2", [
   "rendering-arrays-2.js",
   "rendering-arrays-3.js",
   "children.js",
+  "css-modules/Article.jsx",
+  "css-modules/Article.module.css",
 ]);
 ---
 
@@ -212,11 +214,20 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2", [
     </section>
   </AgendaSection>
 
+  <AgendaSection header="Exercise #1" p="Prop drilling">
+    <section>
+      <p>
+        <a href="https://github.com/jonasholbech/prop-drilling">Prop-drilling</a
+        >
+      </p>
+      <p>Pass down (and use) all the data from App.jsx</p>
+    </section>
+  </AgendaSection>
   <AgendaSection header="<code>props.children</code>">
     <section>
       <p>
         Components receive a special prop called <code>children</code>, which
-        contains all nested JSX
+        contains all nested JSX (remember &lt;slot /&gt;?)
       </p>
       <Code
         code={snippets["children.js"]}
@@ -225,6 +236,17 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2", [
     </section>
   </AgendaSection>
 
+  <AgendaSection header="Exercise #2">
+    <section>
+      <p>In your cloned repo:</p>
+      <p>Hook up Button.jsx and Article.jsx</p>
+      <p>
+        Button.jsx should use <code>children</code> so that we can use our button
+        like this:
+      </p>
+      <pre><code class="js">&lt;Button>Read more&lt;/Button&gt;</code></pre>
+    </section>
+  </AgendaSection>
   <AgendaSection header="mapping, #1">
     <section>
       <h1><code>map</code>'ing</h1>
@@ -263,8 +285,56 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2", [
       <Code code={snippets["rendering-arrays-3.js"]} language="jsx" />
     </section>
   </AgendaSection>
-
-  <AgendaSection header="+3/4">
+  <AgendaSection header="Exercise #3" p="Map our data">
+    <section>
+      <p>In our cloned repo</p>
+      <p>
+        Take the data (hoepfully an array) of articles in <code
+          >ArticleList</code
+        > and map though it
+      </p>
+      <p>Cleaning up our code in the process</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="CSS in React" p="CSS modules">
+    <section>
+      <h2>Many options, we have 2+1</h2>
+      <ul>
+        <li>Tailwind</li>
+        <li>Vanilla CSS</li>
+        <li>+1 CSS modules</li>
+      </ul>
+    </section>
+    <section>
+      <h2>CSS Modules</h2>
+      <p>Purpose</p>
+      <ol>
+        <li>Keeping sane in bigger apps</li>
+        <li>Scope CSS</li>
+      </ol>
+    </section>
+    <section>
+      <p>CSS Modules, syntax</p>
+      <Code code={snippets["css-modules/Article.jsx"]} language="jsx" />
+      <Code code={snippets["css-modules/Article.module.css"]} language="css" />
+    </section>
+    <section>
+      <h3>In the previous example</h3>
+      <ul>
+        <li class="fragment">CSS is scoped</li>
+        <li class="fragment">Usually one CSS file per component</li>
+        <li class="fragment">You can import several stylesheets</li>
+        <li class="fragment">I had one more point?</li>
+      </ul>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Exercise #4" p="Styling our comps">
+    <section>
+      <p>Get CSS modules working</p>
+      <p>Inspect the generated classnames</p>
+    </section>
+  </AgendaSection>
+  <!-- <AgendaSection header="+3/4">
     <section>
       <p>Let's see what you can figure out</p>
       <p>Take what you built earlier and</p>
@@ -277,5 +347,5 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2", [
       </ol>
       <p>When to stop is up to you, keep hacking until you get it</p>
     </section>
-  </AgendaSection>
+  </AgendaSection> -->
 </SlideLayout>
