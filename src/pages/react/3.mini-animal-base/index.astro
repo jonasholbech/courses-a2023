@@ -30,7 +30,6 @@ const snippets = await codeFetcher("react/3.mini-animal-base", [
   <section>
     <h2>Sum up</h2>
     <ol>
-      <li>Mad Brodt - Guest speaker</li>
       <li>Ninja script that I forgot</li>
     </ol>
     <Code code={snippets["ninja-script.js"]} language="js" />
@@ -250,14 +249,15 @@ const snippets = await codeFetcher("react/3.mini-animal-base", [
       <h3>"Rules of Hooks"</h3>
       <p>
         <a href="https://reactjs.org/docs/hooks-rules.html"
-          >https://reactjs.org/docs/hooks-rules.html</a
+          >(old docs) https://reactjs.org/docs/hooks-rules.html</a
         >
       </p>
-      <blockquote>
-        Don't call Hooks inside loops, conditions, or nested functions
-      </blockquote>
       <p>
-        In general, only call <code>useState</code> in callbacks (events / useEffect)
+        Your initial <code>useState</code> call, can NOT be in a condition/loop etc
+      </p>
+      <p>
+        In general, only call the updater function in callbacks (events /
+        useEffect)
       </p>
       <p>Let's try an Example</p>
     </section>
