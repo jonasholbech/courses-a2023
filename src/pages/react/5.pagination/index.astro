@@ -85,11 +85,13 @@ const snippets = await codeFetcher("react/5.pagination", [
           >
         </li>
       </ol>
-      <blockquote>
-        Data fetching, setting up a subscription, and manually changing the DOM
-        in React components are all examples of side effects. Whether or not
-        you're used to calling these operations "side effects" (or just
-        "effects"), ...
+      <blockquote class="fragment">
+        Some components need to synchronize with external systems. For example,
+        you might want to control a non-React component based on the React
+        state, set up a server connection, or send an analytics log when a
+        component appears on the screen. Effects let you run some code after
+        rendering so that you can synchronize your component with some system
+        outside of React.
       </blockquote>
     </section>
     <section>
@@ -256,6 +258,15 @@ const snippets = await codeFetcher("react/5.pagination", [
         code={snippets["update-title-with-useEffect.js"]}
         language="jsx"
       />
+    </section>
+    <section>
+      <p><code class="fragment strike">useEffect?</code></p>
+      <p class="fragment"><code>usefootgun</code></p>
+      <p class="fragment">
+        <a href="https://react.dev/learn/you-might-not-need-an-effect"
+          >https://react.dev/learn/you-might-not-need-an-effect</a
+        >
+      </p>
     </section>
     <section>
       <h3>Simple pagination</h3>
