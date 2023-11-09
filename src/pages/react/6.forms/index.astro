@@ -108,9 +108,10 @@ const snippets = await codeFetcher("react/6.forms", [
       <!-- if it messes up, reembed, removed a lot -->
     </section>
   </AgendaSection>
-  <section>
+  <AgendaSection header="Forms">
     <section>
-      <h1>Forms</h1>
+      <h2>"un-controlled"</h2>
+      <p>Just like Vanilla</p>
     </section>
     <section>
       <p>
@@ -120,8 +121,14 @@ const snippets = await codeFetcher("react/6.forms", [
         >
       </p>
     </section>
+  </AgendaSection>
+  <AgendaSection header="Forms" p="Part #2">
     <section>
-      <p>Working with forms is quite different in React</p>
+      <h2>Controlled</h2>
+      <p>Not at all like vanilla</p>
+    </section>
+    <section>
+      <p>Working with controlled forms is quite different in React</p>
       <ol>
         <li class="fragment">
           We store the initial value of each field in <code>state</code>
@@ -149,7 +156,7 @@ const snippets = await codeFetcher("react/6.forms", [
         lineNumbers="4-5|7-12|27,29,36,38|41|13-19"
       />
     </section>
-  </section>
+  </AgendaSection>
 
   <section>
     <section>
